@@ -6,12 +6,12 @@
 [ext_resource type="Texture2D" uid="uid://byjfwimvjioil" path="res://sprites/background.png" id="1_w33cx"]
 [ext_resource type="Script" path="res://scripts/npc1.gd" id="5_241ha"]
 [ext_resource type="Script" path="res://scripts/npc_2.gd" id="6_1n1nd"]
-[ext_resource type="Texture2D" uid="uid://boyfiqyxstxbx" path="res://sprites/baloes/sprite_0_0.png" id="6_7bvt8"]
+[ext_resource type="Texture2D" uid="uid://boyfiqyxstxbx" path="res://sprites/sprite_0_0.png" id="6_7bvt8"]
 [ext_resource type="Script" path="res://scripts/npc_3.gd" id="7_kxnyv"]
 [ext_resource type="Script" path="res://scripts/questioner.gd" id="8_6oeaw"]
-[ext_resource type="Texture2D" uid="uid://b4wye7n4ybcrd" path="res://sprites/baloes/sprite_0_1.png" id="10_5aj6i"]
-[ext_resource type="Texture2D" uid="uid://7b04hmvoh6qb" path="res://sprites/baloes/sprite_0_2.png" id="11_p3sgq"]
-[ext_resource type="Texture2D" uid="uid://cf4f2tv3yng5f" path="res://sprites/baloes/sprite_0_3.png" id="12_kh0ct"]
+[ext_resource type="Texture2D" uid="uid://b4wye7n4ybcrd" path="res://sprites/sprite_0_1.png" id="10_5aj6i"]
+[ext_resource type="Texture2D" uid="uid://7b04hmvoh6qb" path="res://sprites/sprite_0_2.png" id="11_p3sgq"]
+[ext_resource type="Texture2D" uid="uid://cf4f2tv3yng5f" path="res://sprites/sprite_0_3.png" id="12_kh0ct"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mdfh"]
 texture = ExtResource("1_w33cx")
@@ -844,14 +844,6 @@ shape = SubResource("RectangleShape2D_hpps5")
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(-2, -15)
 zoom = Vector2(2, 2)
-
-[node name="Sprite2D" type="Sprite2D" parent="Player/Camera2D"]
-
-[node name="Fase" type="Label" parent="Player/Camera2D"]
-offset_left = -22.0
-offset_top = -41.0
-offset_right = 18.0
-offset_bottom = -18.0
 
 [node name="Npc1" type="CharacterBody2D" parent="."]
 position = Vector2(95, 118)

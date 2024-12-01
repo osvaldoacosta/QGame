@@ -10,16 +10,16 @@
 "style": "",
 "suffix": ""
 },
-"default_portrait": "imagem_Npc2",
+"default_portrait": "imagem_Npc3",
 "description": "",
-"display_name": "npc1",
+"display_name": "npc3",
 "mirror": false,
-"nicknames": ["test nickname1"],
+"nicknames": ["test nickname3"],
 "offset": Vector2(0, 0),
 "portraits": {
-"imagem_Npc2": {
+"imagem_Npc3": {
 "export_overrides": {
-"image": "\"res://sprites/characters/npc1pfp.png\""
+"image": "\"res://sprites/characters/npc3pfp.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

@@ -2,6 +2,13 @@ extends CharacterBody2D
 
 @onready var _animated_sprite = $Animation
 const SPEED = 80.0
+@onready var label = $Camera2D/Fase  # Substitua pelo caminho do nó Label
+
+@onready var global_data = get_node("/root/Global")
+
+func _ready() -> void:
+	if label:
+		label.text = "Fase 1"  # Define o texto
 
 # Dialogic
 func _input(event: InputEvent):
@@ -10,15 +17,16 @@ func _input(event: InputEvent):
 	if Dialogic.current_timeline != null:
 		return
 
-	if event is InputEventKey and event.keycode == KEY_ENTER and event.pressed:
-		print("Novo evento!")
-		Dialogic.start('timeline1')
-		get_viewport().set_input_as_handled()
+	#if event is InputEventKey and event.keycode == KEY_ENTER and event.pressed:
+	#	print("Novo evento!")
+	#	Dialogic.start('timeline1')
+	#	get_viewport().set_input_as_handled()
 
 
 
 # Processamento de animacoes/interacao
 func _process(delta: float) -> void:
+	label.text = "Fase "+str(global_data.fase)  # Define o texto
 	if(Input.is_action_pressed("ui_right")):
 		_animated_sprite.play("mc_forward_walk")
 	elif(Input.is_action_pressed("ui_left")):

@@ -18,14 +18,23 @@ config/icon="res://icon.svg"
 [autoload]
 
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+Global="*res://Global.gd"
 
 [dialogic]
 
 directories/dch_directory={
-"npc1": "res://dialogic/npc1.dch"
+"npc1": "res://dialogic/npc2.dch",
+"npc2": "res://dialogic/npc1.dch",
+"npc3": "res://dialogic/npc3.dch",
+"player": "res://dialogic/player.dch",
+"questioner": "res://dialogic/questioner.dch"
 }
 directories/dtl_directory={
-"timeline1": "res://dialogic/timeline1.dtl"
+"timeline1": "res://dialogic/timeline1.dtl",
+"timelineNpc1": "res://dialogic/timelineNpc1.dtl",
+"timelineNpc2": "res://dialogic/timelineNpc2.dtl",
+"timelineNpc3": "res://dialogic/timelineNpc3.dtl",
+"timelineQ": "res://dialogic/timelineQ.dtl"
 }
 layout/style_list=["res://dialogic/teste.tres"]
 layout/default_style="res://dialogic/teste.tres"

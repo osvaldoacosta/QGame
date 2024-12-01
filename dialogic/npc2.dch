@@ -10,16 +10,17 @@
 "style": "",
 "suffix": ""
 },
-"default_portrait": "imagem_Npc2",
-"description": "",
-"display_name": "npc1",
+"default_portrait": "Teste imagem",
+"description": "ado ado quem leu isso eh viado?
+",
+"display_name": "npc2",
 "mirror": false,
-"nicknames": ["test nickname1"],
+"nicknames": ["teste nickname2"],
 "offset": Vector2(0, 0),
 "portraits": {
-"imagem_Npc2": {
+"Teste imagem": {
 "export_overrides": {
-"image": "\"res://sprites/characters/npc1pfp.png\""
+"image": "\"res://sprites/characters/npc2pfp.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

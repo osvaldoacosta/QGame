@@ -10,16 +10,16 @@
 "style": "",
 "suffix": ""
 },
-"default_portrait": "imagem_Npc2",
+"default_portrait": "imagem_q",
 "description": "",
-"display_name": "npc1",
+"display_name": "questioner",
 "mirror": false,
-"nicknames": ["test nickname1"],
+"nicknames": [""],
 "offset": Vector2(0, 0),
 "portraits": {
-"imagem_Npc2": {
+"imagem_q": {
 "export_overrides": {
-"image": "\"res://sprites/characters/npc1pfp.png\""
+"image": "\"res://sprites/characters/questpfp.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
