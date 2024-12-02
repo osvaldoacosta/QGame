@@ -1,0 +1,28 @@
+Luan: Então você está empenhado em ser um barraqueiro né? Hmmm, vamos ver o quanto.
+player: Com certeza, vamos nessa, estou pronto para a primeira avaliação.
+Luan: Certo, então irei lhe fazer uma série de perguntas, não vou facilitar, é um trabalho que exige grande responsabilidade.
+Luan: Qual é o principal objetivo do ODS 7
+- Garantir acesso a fontes de energia confiáveis, sustentáveis e modernas para todos
+	[signal arg="acertou1"]
+	set {passouF1} += 1
+- Substituir completamente as energias fósseis por energias renováveis até 2030
+- Reduzir o consumo global de energia pela metade até 2030
+- Assegurar energia gratuita e ilimitada para todos os países
+Luan: Qual dessas metas NÃO está listada como parte do ODS 7?
+- Expandir a infraestrutura e modernizar a tecnologia para energia sustentável
+- Dobrar a taxa global de melhoria da eficiência energética
+- Garantir a educação de qualidade para todos os cidadãos do planeta
+	[signal arg="acertou2"]
+	set {passouF1} += 1
+- Aumentar a participação de energias renováveis na matriz energética global
+Luan: Por que o acesso à energia é considerado essencial, segundo o texto?
+- Porque evita problemas climáticos globais
+- Porque é fundamental para saúde, educação, desenvolvimento econômico e proteção do planeta
+	[signal arg="acertou3"]
+	set {passouF1} += 1
+- Porque permite maior conforto e lazer nas residências
+- Porque reduz automaticamente a pobreza em países subdesenvolvidos
+if {passouF1} == 3:
+	Luan: Está indo bem {playerName}, mas não acaba por aqui, você está habilitado para um novo nível de conhecimento, volte e busque novas informações!
+else:
+	Para você avançar, precisa acertar todas as perguntas, não foi o que aconteceu, volte e converse com os barraqueiros novamente!!

@@ -33,10 +33,13 @@ func is_player_close(player_node: Node) -> bool:
 	var distance = position.distance_to(player_node.position)
 	return distance <= MAX_INTERACTION_DISTANCE
 
+		
 func func_timeline(fase) -> void:
 	if _sprite_to_hide:
 		_sprite_to_hide.visible = false
 	if fase == 1:
+		Dialogic.start('player_npc1_f1')
+		
 		print("fase1") # coloca dialogo da fase 1 aqui
 	if fase == 2:
 		print("fase2") # coloca dilogo da fase 2 aqui

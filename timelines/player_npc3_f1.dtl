@@ -1,0 +1,11 @@
+Amara: Olá {playerName} vi que você está engajado em aprender sobre os ODS, muito bem!! Queria que todos tivessem a mesma curiosidade que você.
+player: Obrigado, tem sido interessante conversar com vocês, vi que todos têm informações relevantes para quem passar por aqui.
+Amara: Fazemos o nosso melhor e vejo que você também está fazendo o seu, está vendo aquele rapaz ali ao final da trilha?
+player: Sim, de verde não é?
+Amara: Isso, então, ele é o responsável pelo cadastro dos barraqueiros, e para que você avançar e se consagrar barraqueiro, é preciso passar por uma avaliação feita por ele.
+Amara: Quer uma dica de como é a avaliação?
+player: <Empty Text Event>
+- Sim, com certeza
+	Amara: Então, ele vai fazer uma série de perguntas, pelo que me contaram, elas são difíceis, é bom você prestar atenção no que os meus colegas vão lhe ensinar certo? Boa sorte
+- Não, deixa comigo!
+	Amara: Boa sorte!

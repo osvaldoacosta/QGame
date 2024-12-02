@@ -1,0 +1,8 @@
+questioner: quanto é 10+10
+- 20
+	[signal arg="acertou1"]
+- 35
+questioner: quanto é 50*3
+- 14
+- 150
+	[signal arg="acertou2"]

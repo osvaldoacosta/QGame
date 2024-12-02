@@ -1,109 +1,107 @@
 extends CharacterBody2D
 
-@onready var _sprite_to_hide = $BalaoP # Substitua pelo caminho do sprite de pergunta
-@onready var _sprite_right = $BalaoRC # Substitua pelo caminho do sprite de resposta certa
-@onready var _sprite_wrong = $BalaoRE # Substitua pelo caminho do sprite de resposta errada
+@onready var _sprite_to_hide = $BalaoP
+@onready var _sprite_right = $BalaoRC
+@onready var _sprite_wrong = $BalaoRE
 
-# Distância máxima para interação
 const MAX_INTERACTION_DISTANCE = 20.0
-
-# Variável global (use um Autoload para gerenciar variáveis globais)
+var playerscore = 0
 @onready var global_data = get_node("/root/Global")
 
 @export var npc_references: Array = ["/root/Game/Npc1/Balao", "/root/Game/Npc2/Balao", "/root/Game/Npc3/Balao"]
-
-var _answer: bool
-
-# Referência para o player
 @export var player: NodePath = "/root/Game/Player"
-
-# Timer para controle do tempo de exibição
-var _timer = null
-
-# Posição inicial do player
 @export var player_start_position = Vector2(100, 118)
+
+var _timer = null
+var _waiting_for_timeline = false
 
 func _ready() -> void:
 	_sprite_wrong.visible = false
+	_sprite_right.visible = false
 	if player == null:
 		print("Atenção: Referência ao player não foi definida!")
-	# Certifique-se de que o sprite a ser exibido inicialmente está oculto
-	if _sprite_right:
-		_sprite_right.visible = false
 
 func _process(delta: float) -> void:
-	# Verifica se o player está dentro da distância máxima
+	if _waiting_for_timeline:
+		return  # Pausa interação enquanto o diálogo está em andamento
 	var player_node = get_node(player)
 	if player_node and is_player_close(player_node):
-		if Input.is_action_just_pressed("ui_accept"): # Verifica se Enter foi pressionado
+		if Input.is_action_just_pressed("ui_accept"):
 			trigger_action()
 
 func is_player_close(player_node: Node) -> bool:
-	# Calcula a distância entre o NPC e o player
-	var distance = position.distance_to(player_node.position)
-	return distance <= MAX_INTERACTION_DISTANCE
+	return position.distance_to(player_node.position) <= MAX_INTERACTION_DISTANCE
 
 func trigger_action() -> void:
-	# Esconde o primeiro sprite
 	if _sprite_to_hide:
 		_sprite_to_hide.visible = false
-		
-	_answer = func_timeline(global_data.fase)
-	
-	if _answer:
-		# Incrementa a variável global
+	func_timeline(global_data.fase)
+
+func func_timeline(fase) -> void:
+	playerscore = 0  # Reseta a pontuação ao iniciar a fase
+	if fase == 1:
+		print("Iniciando fase 1")
+		Dialogic.start('player_questionador_f1')
+		Dialogic.signal_event.connect(DialogicSignal)
+		Dialogic.timeline_ended.connect(_on_timeline_ended)
+		_waiting_for_timeline = true  # Aguarda o fim do diálogo para continuar
+	elif fase == 2:
+		print("Iniciando fase 2")
+		Dialogic.start('player_questionador_f2')
+		Dialogic.signal_event.connect(DialogicSignal)
+		Dialogic.timeline_ended.connect(_on_timeline_ended)
+		_waiting_for_timeline = true
+	elif fase == 3:
+		print("Iniciando fase 3")
+		Dialogic.start('player_questionador_f3')
+		Dialogic.signal_event.connect(DialogicSignal)
+		Dialogic.timeline_ended.connect(_on_timeline_ended)
+		_waiting_for_timeline = true
+
+func DialogicSignal(argument: String) -> void:
+	if argument in ['acertou1', 'acertou2']:
+		playerscore += 1
+		print("Pontuação atual:", playerscore)
+
+func _on_timeline_ended() -> void:
+	print("Diálogo encerrado. Pontuação:", playerscore)
+	_waiting_for_timeline = false  # Permite novas interações
+	if playerscore == 2:
+		print("Jogador passou de fase!")
 		global_data.fase += 1
-		# balao de acerto
 		start_timer_with_balao(_sprite_right)
-		# Teleporta o player para a posição inicial
 		teleport_player_to_start()
-		
-	
 	else:
-		# balao de erros
+		print("Jogador não atingiu a pontuação necessária.")
 		start_timer_with_balao(_sprite_wrong)
-		_sprite_to_hide.visible = true
-		
+		if _sprite_to_hide:
+			_sprite_to_hide.visible = true
+
 func start_timer_with_balao(balao) -> void:
 	balao.visible = true
-	# Configura um timer para ocultar o segundo sprite após 2 segundos
 	if not _timer:
 		_timer = Timer.new()
 		add_child(_timer)
 		_timer.one_shot = true
 		_timer.wait_time = 2.0
 		_timer.connect("timeout", Callable(self, "_on_timer_timeout").bind(balao))
-	_timer.start()	
+		_timer.start()
 
 func _on_timer_timeout(balao) -> void:
-	# Esconde o sprite de resposta errada quando o timer expira
 	if balao:
 		balao.visible = false
 	if _timer:
 		_timer.queue_free()
 		_timer = null
 
-func func_timeline(fase) -> bool:
-	if fase == 1:
-		print("fase1")
-		return true # coloca dialogo da fase 1 aqui podendo retornar true ou false
-	if fase == 2:
-		print("fase2")
-		return true # coloca dilogo da fase 2 aqui podendo retornar true ou false
-	if fase == 3:
-		print("fase3")
-		return false # coloca dialogo da fase 3 aqui podendo retornar true ou false
-	return true
-				
 func teleport_player_to_start() -> void:
 	var player_node = get_node_or_null(player)
 	if player_node:
 		player_node.global_position = player_start_position
 	show_other_npcs_sprites()
-	
+
 func show_other_npcs_sprites() -> void:
 	for npc in npc_references:
-		if npc:
-			var sprite = get_node(npc) # Substitua pelo caminho do sprite no NPC
-			if sprite:
-				sprite.visible = true
+		var sprite = get_node(npc)
+		if sprite:
+			sprite.visible = true

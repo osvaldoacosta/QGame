@@ -1,0 +1,12 @@
+Jose: Olá {playerName} player, seja bem vindo ao nosso Universo, para que você se torne um barraqueiro assim como nós, deverá passar pela trilha de conhecimento e provar que está se engajando em aprender! É um dever nobre, precisamos de alguém comprometido e espero que você consiga atingir esse tão almejado objetivo!
+player: Estou lisonjeado com a oportunidade, darei o meu melhor!!
+Jose: A princípio precisamos discutir sobre um sério assunto!\
+Hoje o nosso planeta enfrenta grandes desafios, e muitos deles não sabemos nem por onde começar a solucionar, por exemplo, como acabar com a pobreza? como proteger o meio ambiente? Como garantir saúde de qualidade a todos? e por aí vai. Você algum dia já pensou em como poderia resolver isso??
+player: <Empty Text Event>
+- a
+	Jose: Tenho que concordar, mas mesmo que sejam difíceis, o importante é buscar uma solução, é para isso que surgiram os Objetivos de Desenvolvimento Sustentável, conhecidos como ODS.
+- b
+	Jose: Caramba, acho que precisamos conversar mais sobre isso, assim como você, vários países também buscaram pensar em uma solução, foi por isso que surgiram os Objetivos de Desenvolvimento Sustentável, conhecidos como ODS.
+Jose: Os ODS são uma agenda criada pela Organização das Nações Unidas, a ONU, em 2015. Essa agenda tem 17 objetivos e 169 metas que buscam equilibrar três grandes áreas\: economia, sociedade e meio ambiente. O Brasil foi um dos países que assinou e se comprometeu com a Agenda 2030, garantindo que iria usar esforços para transformar o nosso país em um lugar mais justo, sustentável e pacífico até 2030.
+Todos os objetivos são igualmente importantes, mas nesta jornada nós iremos tratar sobre o ODS de número 7, que visa garantir o acesso a fontes de energia confiáveis, sustentáveis e modernas para todos.\
+Vá em frente e descubra mais sobre ele.

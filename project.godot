@@ -23,22 +23,37 @@ Global="*res://Global.gd"
 [dialogic]
 
 directories/dch_directory={
-"npc1": "res://dialogic/npc2.dch",
-"npc2": "res://dialogic/npc1.dch",
+"Amara": "res://timelines/personagens/Amara.dch",
+"Jose": "res://timelines/personagens/Jose.dch",
+"Luan": "res://timelines/personagens/Luan.dch",
+"Marco": "res://timelines/personagens/Marco.dch",
+"npc1": "res://dialogic/npc1.dch",
+"npc2": "res://dialogic/npc2.dch",
 "npc3": "res://dialogic/npc3.dch",
 "player": "res://dialogic/player.dch",
 "questioner": "res://dialogic/questioner.dch"
 }
 directories/dtl_directory={
+"player_npc1_f1": "res://timelines/player_npc1_f1.dtl",
+"player_npc2_f1": "res://timelines/player_npc2_f1.dtl",
+"player_npc3_f1": "res://timelines/player_npc3_f1.dtl",
+"player_questionador_f1": "res://timelines/player_questionador_f1.dtl",
+"player_questionador_f2": "res://timelines/player_questionador_f2.dtl",
 "timeline1": "res://dialogic/timeline1.dtl",
 "timelineNpc1": "res://dialogic/timelineNpc1.dtl",
 "timelineNpc2": "res://dialogic/timelineNpc2.dtl",
 "timelineNpc3": "res://dialogic/timelineNpc3.dtl",
 "timelineQ": "res://dialogic/timelineQ.dtl"
 }
-layout/style_list=["res://dialogic/teste.tres"]
+layout/style_list=["res://dialogic/teste.tres", "res://timelines/personagens/pictureStyle.tres"]
 layout/default_style="res://dialogic/teste.tres"
-variables={}
+variables={
+"npc1": "Jose",
+"npc2": "Marco",
+"npc3": "Amara",
+"passouF1": 0,
+"playerName": "Mateus"
+}
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
