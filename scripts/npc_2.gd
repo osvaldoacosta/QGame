@@ -38,7 +38,10 @@ func func_timeline(fase) -> void:
 		_sprite_to_hide.visible = false
 	if fase == 1:
 		print("fase1") # coloca dialogo da fase 1 aqui
+		Dialogic.start('player_npc2_f1')
 	if fase == 2:
 		print("fase2") # coloca dilogo da fase 2 aqui
+		Dialogic.start('player_npc2_f2')
 	if fase == 3:
-		print("fase3") # coloca dialogo da fase 3 aqui 
+		print("fase3") # coloca dialogo da fase 3 aqui
+		Dialogic.start('player_npc2_f3') 
