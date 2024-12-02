@@ -1,0 +1,19 @@
+Jose: Fala {playerName}, por aqui denovo, parabéns por passar na primeira fase! Vamos para mais uma?
+player: Com certeza!
+Jose: Você já entende o que é a transição energética?
+[wait time="0.5"]
+player: <Empty Text Event>
+- Sim, já me informei sobre.
+- inda não, você pode me explicar?
+	Jose: A transição energética é o processo de mudança do uso predominante de fontes de energia baseadas em combustíveis fósseis, como petróleo, para fontes renováveis e mais sustentáveis  Essa mudança busca reduzir emissões de gases de efeito estufa, e promover um sistema energético mais limpo, eficiente e seguro.
+player: Hmmm, entendi, quero tirar outra dúvida, como está o cumprimento das metas relacionadas a isso?
+Jose: Até então, de acordo com o relatório Tracking SDG 7\: The Energy Progress Report, há 675 milhões de pessoas vivendo sem eletricidade em todo o mundo. Esse estudo foi preparado pelas cinco organizações responsáveis pelo ODS 7. 
+Jose: Apesar de haver algum progresso nos indicadores, o ritmo atual não é ainda adequado para atingir nenhuma das metas pensadas para 2030. Há países que na verdade estão regredindo.
+Jose: Em relação a eficiência energética, foi traçada uma meta anual de melhora em torno de 2,6%, porém, a tendência desta taxa está por volta de 1,8%. 
+Jose: Também tivemos alguns outros problemas, como a pandemia de COVID-19, para combater o vírus foram gastos trilhões de dólares, só o Brasil gastou mais de 540 bilhões de reais.
+[wait time="0.5"]
+player: <Empty Text Event>
+- Caramba, poderíamos estar melhor em.
+- Além da pandemia, algum outro evento mundial atrapalhou a transição energética?
+	Jose: Tivemos guerras que acabam desviando os orçamentos para fomentar os embates entre países, que por um lado atrapalham e por outro mostram como é importante cultivar um suprimento local de energia, principalmente advindo de fontes renováveis.
+Jose: Com certeza, As energias renováveis devem responder por um terço do consumo total de energia em 2030 para estar no caminho certo. Ainda há tempo de melhora!

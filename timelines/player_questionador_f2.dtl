@@ -1,4 +1,8 @@
-questioner: quanto é 10+10
+Luan: Por aqui novamente? Então tá fazendo tudo como deveria ein?
+player: Espero que sim, as coisas estão mais complicadas do que pensei.
+Luan: Calma player, também não é assim, não desanime, mostre que prestou atenção em todos os dados. Quero que você se torne um nobre barraqueiro. Mas não vou facilitar em.
+player: Deixa comigo!
+player: quanto é 10+10
 - 20
 	[signal arg="acertou1"]
 - 35

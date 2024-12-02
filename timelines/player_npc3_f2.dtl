@@ -1,0 +1,24 @@
+Amara: Ouvi por aí que você anda preocupado, é isso mesmo?
+[wait time="0.5"]
+player: <Empty Text Event>
+- Sim, acho que as metas são ambiciosas demais pra 2030, não sei se vamos conseguir.
+	Amara: Ambiciosas, tem razão, mas não impossíveis, você quer ser um barraqueiro certo? Então deve ter fé que conseguiremos mudar.
+- Também, mas vou usar minha preocupação como cobustível para cumprir o meu dever!
+	Amara: É assim que se fala!
+Amara: Deixa eu te contar algo interessante. Sabe que em 2023, para cada dólar investido em combustíveis fósseis, cerca de 1,70 dólares foram investidos em energia limpa?
+[wait time="0.5"]
+player: <Empty Text Event>
+- Uau, parece que estamos finalmente indo na direção certa!
+	Amara: Fico feliz que você pense assim, Player! Essa mudança mostra que a transição energética está ganhando força. Com mais pessoas engajadas, como você, podemos acelerar ainda mais esse progresso.
+- Hmm... ainda não sei. Isso é suficiente para fazer diferença no longo prazo?
+	Amara: É normal sentir essa dúvida, Player. Mas pense nisso\: essa proporção era impensável há alguns anos. É um sinal de que estamos no caminho certo. E lembre-se, cada passo importa na construção de um futuro sustentável.
+Amara: Os passos ainda precisam ser mais largos? Sim,! Mas a cada ano que se passa mais pessoas tem acesso a energia limpa e de qualidade, Mais governos estão apostando nesse tema, temos que ser vetores destas mudanças.
+Amara: Mas e então, você é Brasileiro?
+[wait time="0.5"]
+player: <Empty Text Event>
+- Sim, como muito orgulho!.
+	Amara: Então você vai gostar muito de saber sobre ele, o Brasil tem a chance de ser líder global na transição além da chance de se aproximar do cumprimento das metas estabelecidas com a ODS 7, mas vamos guardar o melhor para o final, até mais!
+- Não, sou de outro país
+	Amara: Então nós, barraqueiros, vamos adorar te falar sobre ele, o Brasil tem a chance de ser líder global na transição além da chance de se aproximar do cumprimento das metas estabelecidas com a ODS 7, mas vamos guardar o melhor para o final, até mais!
+player: Obrigado pela injeção de ânimo amara, estava realmente precisando! Até!
+[end_timeline]

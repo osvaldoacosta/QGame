@@ -35,8 +35,11 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "player_npc1_f1": "res://timelines/player_npc1_f1.dtl",
+"player_npc1_f2": "res://timelines/player_npc1_f2.dtl",
 "player_npc2_f1": "res://timelines/player_npc2_f1.dtl",
+"player_npc2_f2": "res://timelines/player_npc2_f2.dtl",
 "player_npc3_f1": "res://timelines/player_npc3_f1.dtl",
+"player_npc3_f2": "res://timelines/player_npc3_f2.dtl",
 "player_questionador_f1": "res://timelines/player_questionador_f1.dtl",
 "player_questionador_f2": "res://timelines/player_questionador_f2.dtl",
 "timeline1": "res://dialogic/timeline1.dtl",

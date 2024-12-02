@@ -1,0 +1,20 @@
+player: Olá Marco, será que você pode me ajudar?
+Marco: Claro {playerName}, o que houve, você está com um semblante preocupado.
+player: Pois é cara, todo o esforço para ser um barraqueiro faz parte do meu objetivo, mas não sabia que seria difícil  atingir as metas para 2030
+Marco: Eu que o diga, todos ficamos preocupados com o panorama atual, mas é preciso que todos saibamos disso para que seja possível cobrar das autoridades responsáveis.
+Marco: Também não fico contente, mas faz parte do meu dever transmitir isso para você, mas e então, quer que eu fale primeir a noticia ruim ou a notícia boa?
+[wait time="0.5"]
+player: <Empty Text Event>
+- A notícia boa .
+	Marco: A boa é que nem tudo está perdido, temos alguns avanços, no panorama geral, principalmente se focarmos nos países de primeiro mundo, porém o avanço precisa ser global e é aí que mora a preocupação.
+	Marco: Sobre a ruim, tenho que trazer alguns dados para você\: O investimento público para financiamento de energia limpa para países em desenvolvimento caiu de 28,4 bilhões de dólares para 10.8 bilhões de dólares em 2021,
+	Marco: isso se torna mais preocupante ainda quando pensamos que 80% das pessoas que vivem no escuro são da África Subsaariana.
+	Marco: Além disso, mesmo que fontes renováveis fornecam 30% da pandemia mundial, elas ainda tem pouca participação em outros setores, correspondendo a apenas 4% nos meios de transporte e 10,4% para fontes de calor.
+- Pode mandar a ruim
+	Marco: Sobre a ruim, tenho que trazer alguns dados para você\: O investimento público para financiamento de energia limpa para países em desenvolvimento caiu de 28,4 bilhões de dólares para 10.8 bilhões de dólares em 2021, 
+	Marco: isso se torna mais preocupante ainda quando pensamos que 80% das pessoas que vivem no escuro são da África Subsaariana.
+	Marco: Além disso, mesmo que fontes renováveis fornecam 30% da pandemia mundial, elas ainda tem pouca participação em outros setores, correspondendo a apenas 4% nos meios de transporte e 10,4% para fontes de calor.
+	Marco: A boa é que nem tudo está perdido, temos alguns avanços, no panorama geral, principalmente se focarmos nos países de primeiro mundo, porém o avanço precisa ser global e é aí que mora a preocupação.
+player: Esperava uma notícia boa melhor, preciso fazer algo para mudar esse panorama, para já!!
+Marco: Tenha calma pequeno gafanhoto, você com certeza contribuirá nessa missão mundial, seu primeiro passo será como um barraqueiro.
+Marco: Continue aprendendo com os meus colegas barraqueiros, pois esse é o caminho certo!
