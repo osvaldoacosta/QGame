@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="bredmeayuda"
+config/name="QGame"
 run/main_scene="res://game.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
@@ -48,7 +48,7 @@ directories/dtl_directory={
 "timelineNpc3": "res://dialogic/timelineNpc3.dtl",
 "timelineQ": "res://dialogic/timelineQ.dtl"
 }
-layout/style_list=["res://dialogic/teste.tres", "res://timelines/personagens/pictureStyle.tres"]
+layout/style_list=["res://timelines/personagens/pictureStyle.tres"]
 layout/default_style="res://dialogic/teste.tres"
 variables={
 "npc1": "Jose",
@@ -81,8 +81,8 @@ glossary/default_case_sensitive=true
 
 [display]
 
-window/size/viewport_width=480
-window/size/viewport_height=160
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 window/stretch/mode="viewport"
 
 [editor_plugins]

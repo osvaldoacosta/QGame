@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=4 uid="uid://rgq4vnq1ni2s"]
+[gd_scene load_steps=56 format=4 uid="uid://rgq4vnq1ni2s"]
 
 [ext_resource type="Texture2D" uid="uid://crehfu7sum0aj" path="res://sprites/scenetiles.png" id="1_h3ynu"]
 [ext_resource type="Texture2D" uid="uid://tus0p4rif" path="res://sprites/gamesprites.png" id="1_hcd81"]
@@ -678,6 +678,8 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hpps5"]
 size = Vector2(14, 16)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cpile"]
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_47d7l"]
 atlas = ExtResource("1_hcd81")
 region = Rect2(0, 64, 16, 16)
@@ -702,6 +704,8 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xc7h6"]
 size = Vector2(12, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wlte0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5whrp"]
 atlas = ExtResource("1_hcd81")
@@ -728,6 +732,8 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3ead0"]
 size = Vector2(12, 16)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ank3c"]
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_m08ys"]
 atlas = ExtResource("1_hcd81")
 region = Rect2(0, 80, 16, 16)
@@ -752,6 +758,8 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dpauc"]
 size = Vector2(14, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cbhxn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nf75u"]
 atlas = ExtResource("1_hcd81")
@@ -809,7 +817,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_38hpv"]
-size = Vector2(14, 16)
+size = Vector2(13.815, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8dr7s"]
+size = Vector2(16, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eoxux"]
 size = Vector2(20, 133)
@@ -817,21 +828,25 @@ size = Vector2(20, 133)
 [node name="Game" type="Node2D"]
 position = Vector2(86, 0)
 
-[node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -186.0
-offset_top = -1.0
-offset_right = 446.0
-offset_bottom = 125.0
+[node name="Map" type="Node" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="Map"]
+offset_left = -189.0
+offset_top = -7.0
+offset_right = 525.0
+offset_bottom = 126.0
 texture = ExtResource("1_w33cx")
 expand_mode = 2
 
-[node name="TileMapLayer" type="TileMapLayer" parent="."]
+[node name="TileMapLayer" type="TileMapLayer" parent="Map"]
 position = Vector2(28, 46)
-tile_map_data = PackedByteArray("AAD+/wUAAwAAAAEAAAD//wUAAwAAAAEAAAAAAAUAAwAAAAEAAAABAAUAAwAAAAEAAAACAAUAAwAAAAEAAAADAAUAAwAAAAEAAAAEAAUAAwAAAAEAAAAFAAUAAwAAAAEAAAAGAAUAAwAAAAEAAAAHAAUAAwAAAAEAAAAIAAUAAwAAAAEAAAAJAAUAAwAAAAEAAAAKAAUAAwABAAEAAAALAAUAAwAAAAEAAAAMAAUAAwABAAEAAAANAAUAAwAAAAEAAAAOAAUAAwAAAAEAAAAPAAUAAwAAAAEAAAAQAAUAAwAAAAEAAAARAAUAAwAAAAEAAAD+/wYAAwACAAEAAAD//wYAAwACAAEAAAAAAAYAAwACAAEAAAABAAYAAwACAAEAAAACAAYAAwACAAEAAAADAAYAAwACAAEAAAAEAAYAAwACAAEAAAAFAAYAAwACAAEAAAAGAAYAAwACAAEAAAAHAAYAAwACAAEAAAAIAAYAAwACAAEAAAAJAAYAAwACAAEAAAARAAYAAwACAAEAAAAQAAYAAwACAAEAAAAPAAYAAwACAAEAAAAOAAYAAwACAAEAAAANAAYAAwACAAEAAAAMAAYAAwACAAEAAAALAAYAAwACAAEAAAAKAAYAAwACAAEAAAASAAUAAwABAAEAAAASAAYAAwADAAEAAAACAAQAAwAAAAMAAAADAAQAAwABAAMAAAAGAAQAAwAAAAMAAAAHAAQAAwABAAMAAAAKAAQAAwAAAAMAAAALAAQAAwABAAMAAAD9/wUAAwAAAAEAAAD8/wUAAwAAAAEAAAD7/wUAAwAAAAEAAAD6/wUAAwAAAAEAAAD5/wUAAwAAAAEAAAATAAUAAwAAAAEAAAAUAAUAAwAAAAEAAAAVAAUAAwAAAAEAAAAWAAUAAwAAAAEAAAATAAYAAwACAAEAAAAUAAYAAwACAAEAAAAVAAYAAwACAAEAAAAWAAYAAwACAAEAAAD9/wYAAwACAAEAAAD8/wYAAwACAAEAAAD7/wYAAwACAAEAAAD6/wYAAwACAAEAAAD5/wYAAwACAAEAAAD5/wcAAwACAAEAAAD6/wcAAwACAAEAAAAYAAcAAwACAAEAAAAYAAYAAwACAAEAAAAXAAYAAwACAAEAAAAXAAcAAwACAAEAAAAWAAcAAwACAAEAAAAVAAcAAwACAAEAAAAUAAcAAwACAAEAAAATAAcAAwACAAEAAAASAAcAAwACAAEAAAARAAcAAwACAAEAAAAQAAcAAwACAAEAAAAPAAcAAwACAAEAAAAOAAcAAwACAAEAAAANAAcAAwACAAEAAAAMAAcAAwACAAEAAAALAAcAAwACAAEAAAAKAAcAAwACAAEAAAAJAAcAAwACAAEAAAAIAAcAAwACAAEAAAAHAAcAAwACAAEAAAAGAAcAAwACAAEAAAAFAAcAAwACAAEAAAAEAAcAAwACAAEAAAADAAcAAwACAAEAAAACAAcAAwACAAEAAAABAAcAAwACAAEAAAAAAAcAAwACAAEAAAD//wcAAwACAAEAAAD+/wcAAwACAAEAAAD9/wcAAwACAAEAAAD8/wcAAwACAAEAAAD7/wcAAwACAAEAAAD4/wYAAwACAAEAAAD3/wYAAwACAAEAAAD3/wcAAwACAAEAAAD3/wgAAwACAAEAAAD4/wgAAwACAAEAAAD4/wcAAwACAAEAAAAXAAUAAwABAAEAAAAYAAUAAwABAAEAAAD4/wUAAwABAAEAAAD3/wUAAwABAAEAAAAWAP3/AgABAAQAAAAWAP7/AgABAAUAAAAWAP//AgABAAYAAAAWAAAAAgABAAcAAAAWAAEAAgABAAgAAAAWAAIAAgABAAkAAAAWAAMAAgABAAoAAAAWAAQAAgABAAsAAAAXAP3/AgACAAQAAAAXAP7/AgACAAUAAAAXAP//AgACAAYAAAAXAAAAAgACAAcAAAAXAAEAAgACAAgAAAAXAAIAAgACAAkAAAAXAAMAAgACAAoAAAAXAAQAAgACAAsAAAAYAP3/AgADAAQAAAAYAP7/AgADAAUAAAAYAP//AgADAAYAAAAYAAAAAgADAAcAAAAYAAEAAgADAAgAAAAYAAIAAgADAAkAAAAYAAMAAgADAAoAAAAYAAQAAgADAAsAAAAZAP3/AgAEAAQAAAAZAP7/AgAEAAUAAAAZAP//AgAEAAYAAAAZAAAAAgAEAAcAAAAZAAEAAgAEAAgAAAAZAAIAAgAEAAkAAAAZAAMAAgAEAAoAAAAZAAQAAgAEAAsAAAD2/wUAAwABAAEAAAD1/wUAAwABAAEAAAD0/wUAAwABAAEAAADz/wUAAwABAAEAAADz/wYAAwACAAEAAAD0/wYAAwACAAEAAAD1/wYAAwACAAEAAAD1/wcAAwACAAEAAAD2/wcAAwACAAEAAAD2/wYAAwACAAEAAAD0/wcAAwACAAEAAADz/wcAAwACAAEAAADy/wcAAwACAAEAAADy/wYAAwACAAEAAADy/wUAAwABAAEAAAAZAAUAAwABAAEAAAAZAAYAAwACAAEAAAAZAAcAAwACAAEAAAA=")
+tile_map_data = PackedByteArray("AAD+/wUAAwAAAAEAAAD//wUAAwAAAAEAAAAAAAUAAwAAAAEAAAABAAUAAwAAAAEAAAACAAUAAwAAAAEAAAADAAUAAwAAAAEAAAAEAAUAAwAAAAEAAAAFAAUAAwAAAAEAAAAGAAUAAwAAAAEAAAAHAAUAAwAAAAEAAAAIAAUAAwAAAAEAAAAJAAUAAwAAAAEAAAAKAAUAAwABAAEAAAALAAUAAwAAAAEAAAAMAAUAAwABAAEAAAANAAUAAwAAAAEAAAAOAAUAAwAAAAEAAAAPAAUAAwAAAAEAAAAQAAUAAwAAAAEAAAARAAUAAwAAAAEAAAD+/wYAAwACAAEAAAD//wYAAwACAAEAAAAAAAYAAwACAAEAAAABAAYAAwACAAEAAAACAAYAAwACAAEAAAADAAYAAwACAAEAAAAEAAYAAwACAAEAAAAFAAYAAwACAAEAAAAGAAYAAwACAAEAAAAHAAYAAwACAAEAAAAIAAYAAwACAAEAAAAJAAYAAwACAAEAAAARAAYAAwACAAEAAAAQAAYAAwACAAEAAAAPAAYAAwACAAEAAAAOAAYAAwACAAEAAAANAAYAAwACAAEAAAAMAAYAAwACAAEAAAALAAYAAwACAAEAAAAKAAYAAwACAAEAAAASAAUAAwABAAEAAAASAAYAAwADAAEAAAACAAQAAwAAAAMAAAADAAQAAwABAAMAAAAGAAQAAwAAAAMAAAAHAAQAAwABAAMAAAAKAAQAAwAAAAMAAAALAAQAAwABAAMAAAD9/wUAAwAAAAEAAAD8/wUAAwAAAAEAAAD7/wUAAwAAAAEAAAD6/wUAAwAAAAEAAAD5/wUAAwAAAAEAAAATAAUAAwAAAAEAAAAUAAUAAwAAAAEAAAAVAAUAAwAAAAEAAAAWAAUAAwAAAAEAAAATAAYAAwACAAEAAAAUAAYAAwACAAEAAAAVAAYAAwACAAEAAAAWAAYAAwACAAEAAAD9/wYAAwACAAEAAAD8/wYAAwACAAEAAAD7/wYAAwACAAEAAAD6/wYAAwACAAEAAAD5/wYAAwACAAEAAAD5/wcAAwACAAEAAAD6/wcAAwACAAEAAAAYAAcAAwACAAEAAAAYAAYAAwACAAEAAAAXAAYAAwACAAEAAAAXAAcAAwACAAEAAAAWAAcAAwACAAEAAAAVAAcAAwACAAEAAAAUAAcAAwACAAEAAAATAAcAAwACAAEAAAASAAcAAwACAAEAAAARAAcAAwACAAEAAAAQAAcAAwACAAEAAAAPAAcAAwACAAEAAAAOAAcAAwACAAEAAAANAAcAAwACAAEAAAAMAAcAAwACAAEAAAALAAcAAwACAAEAAAAKAAcAAwACAAEAAAAJAAcAAwACAAEAAAAIAAcAAwACAAEAAAAHAAcAAwACAAEAAAAGAAcAAwACAAEAAAAFAAcAAwACAAEAAAAEAAcAAwACAAEAAAADAAcAAwACAAEAAAACAAcAAwACAAEAAAABAAcAAwACAAEAAAAAAAcAAwACAAEAAAD//wcAAwACAAEAAAD+/wcAAwACAAEAAAD9/wcAAwACAAEAAAD8/wcAAwACAAEAAAD7/wcAAwACAAEAAAD4/wYAAwACAAEAAAD3/wYAAwACAAEAAAD3/wcAAwACAAEAAAD4/wcAAwACAAEAAAAXAAUAAwABAAEAAAAYAAUAAwABAAEAAAD4/wUAAwABAAEAAAD3/wUAAwABAAEAAAAWAP3/AgABAAQAAAAWAP7/AgABAAUAAAAWAP//AgABAAYAAAAWAAAAAgABAAcAAAAWAAEAAgABAAgAAAAWAAIAAgABAAkAAAAWAAMAAgABAAoAAAAWAAQAAgABAAsAAAAXAP3/AgACAAQAAAAXAP7/AgACAAUAAAAXAP//AgACAAYAAAAXAAAAAgACAAcAAAAXAAEAAgACAAgAAAAXAAIAAgACAAkAAAAXAAMAAgACAAoAAAAXAAQAAgACAAsAAAAYAP3/AgADAAQAAAAYAP7/AgADAAUAAAAYAP//AgADAAYAAAAYAAAAAgADAAcAAAAYAAEAAgADAAgAAAAYAAIAAgADAAkAAAAYAAMAAgADAAoAAAAYAAQAAgADAAsAAAAZAP3/AgAEAAQAAAAZAP7/AgAEAAUAAAAZAP//AgAEAAYAAAAZAAAAAgAEAAcAAAAZAAEAAgAEAAgAAAAZAAIAAgAEAAkAAAAZAAMAAgAEAAoAAAAZAAQAAgAEAAsAAAD2/wUAAwABAAEAAAD1/wUAAwABAAEAAAD0/wUAAwABAAEAAADz/wUAAwABAAEAAADz/wYAAwACAAEAAAD0/wYAAwACAAEAAAD1/wYAAwACAAEAAAD1/wcAAwACAAEAAAD2/wcAAwACAAEAAAD2/wYAAwACAAEAAAD0/wcAAwACAAEAAADz/wcAAwACAAEAAADy/wcAAwACAAEAAADy/wYAAwACAAEAAADy/wUAAwABAAEAAAAZAAUAAwABAAEAAAAZAAYAAwACAAEAAAAZAAcAAwACAAEAAAAaAAUAAwABAAEAAAAbAAUAAwABAAEAAAAdAAUAAwABAAEAAAAcAAUAAwABAAEAAAAeAAUAAwABAAEAAAAaAAYAAwADAAEAAAAbAAYAAwADAAEAAAAcAAYAAwADAAEAAAAdAAYAAwADAAEAAAAeAAYAAwADAAEAAAAeAAcAAwADAAEAAAAdAAcAAwADAAEAAAAcAAcAAwADAAEAAAAbAAcAAwADAAEAAAAaAAcAAwADAAEAAAA=")
 tile_set = SubResource("TileSet_3glca")
 
 [node name="Player" type="CharacterBody2D" parent="."]
-position = Vector2(12, 118)
+z_index = 1
+position = Vector2(-74, 118)
+collision_layer = 0
 script = ExtResource("1_vclcn")
 
 [node name="Animation" type="AnimatedSprite2D" parent="Player"]
@@ -843,7 +858,7 @@ shape = SubResource("RectangleShape2D_hpps5")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(-2, -15)
-zoom = Vector2(2, 2)
+zoom = Vector2(8, 8)
 
 [node name="Sprite2D" type="Sprite2D" parent="Player/Camera2D"]
 
@@ -853,90 +868,131 @@ offset_top = -41.0
 offset_right = 18.0
 offset_bottom = -18.0
 
-[node name="Npc1" type="CharacterBody2D" parent="."]
+[node name="Area2D" type="Area2D" parent="Player"]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Area2D"]
+shape = SubResource("RectangleShape2D_cpile")
+
+[node name="NPCs" type="Node" parent="."]
+
+[node name="Npc1" type="CharacterBody2D" parent="NPCs"]
 position = Vector2(95, 118)
 disable_mode = 1
 collision_layer = 2
-collision_mask = 2
+collision_mask = 0
 script = ExtResource("5_241ha")
 
-[node name="Animation" type="AnimatedSprite2D" parent="Npc1"]
+[node name="Animation" type="AnimatedSprite2D" parent="NPCs/Npc1"]
 sprite_frames = SubResource("SpriteFrames_koye0")
 animation = &"npc_1_idle"
 
-[node name="Collision" type="CollisionShape2D" parent="Npc1"]
+[node name="Collision" type="CollisionShape2D" parent="NPCs/Npc1"]
 shape = SubResource("RectangleShape2D_xc7h6")
 
-[node name="Balao" type="Sprite2D" parent="Npc1"]
+[node name="Balao" type="Sprite2D" parent="NPCs/Npc1"]
 position = Vector2(7, -18)
 texture = ExtResource("6_7bvt8")
 
-[node name="Npc2" type="CharacterBody2D" parent="."]
+[node name="Area2D" type="Area2D" parent="NPCs/Npc1"]
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Npc1/Area2D"]
+shape = SubResource("RectangleShape2D_wlte0")
+
+[node name="Npc2" type="CharacterBody2D" parent="NPCs"]
 position = Vector2(161, 118)
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("6_1n1nd")
 
-[node name="Animation" type="AnimatedSprite2D" parent="Npc2"]
+[node name="Animation" type="AnimatedSprite2D" parent="NPCs/Npc2"]
 sprite_frames = SubResource("SpriteFrames_53ksp")
 animation = &"npc_2_idle"
 
-[node name="Collision" type="CollisionShape2D" parent="Npc2"]
+[node name="Collision" type="CollisionShape2D" parent="NPCs/Npc2"]
 shape = SubResource("RectangleShape2D_3ead0")
 
-[node name="Balao" type="Sprite2D" parent="Npc2"]
+[node name="Balao" type="Sprite2D" parent="NPCs/Npc2"]
 position = Vector2(6, -17)
 texture = ExtResource("6_7bvt8")
 
-[node name="Npc3" type="CharacterBody2D" parent="."]
+[node name="Area2D" type="Area2D" parent="NPCs/Npc2"]
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Npc2/Area2D"]
+shape = SubResource("RectangleShape2D_ank3c")
+
+[node name="Npc3" type="CharacterBody2D" parent="NPCs"]
 position = Vector2(225, 118)
 disable_mode = 1
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("7_kxnyv")
 
-[node name="Animation" type="AnimatedSprite2D" parent="Npc3"]
+[node name="Animation" type="AnimatedSprite2D" parent="NPCs/Npc3"]
 sprite_frames = SubResource("SpriteFrames_cv2xy")
 animation = &"npc_3_idle"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Npc3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Npc3"]
 shape = SubResource("RectangleShape2D_dpauc")
 
-[node name="Balao" type="Sprite2D" parent="Npc3"]
+[node name="Balao" type="Sprite2D" parent="NPCs/Npc3"]
 position = Vector2(6, -16)
 texture = ExtResource("6_7bvt8")
 
-[node name="Questioner" type="CharacterBody2D" parent="."]
-position = Vector2(283, 118)
+[node name="Area2D" type="Area2D" parent="NPCs/Npc3"]
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Npc3/Area2D"]
+shape = SubResource("RectangleShape2D_cbhxn")
+
+[node name="Questioner" type="CharacterBody2D" parent="NPCs"]
+position = Vector2(330.815, 118)
+collision_layer = 3
+collision_mask = 2
 script = ExtResource("8_6oeaw")
 
-[node name="Animation" type="AnimatedSprite2D" parent="Questioner"]
+[node name="Animation" type="AnimatedSprite2D" parent="NPCs/Questioner"]
 sprite_frames = SubResource("SpriteFrames_1gpc0")
 animation = &"q_idle"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Questioner"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Questioner"]
+position = Vector2(0.0924988, 0)
 shape = SubResource("RectangleShape2D_38hpv")
 
-[node name="Timer" type="Timer" parent="Questioner"]
+[node name="Timer" type="Timer" parent="NPCs/Questioner"]
 
-[node name="BalaoP" type="Sprite2D" parent="Questioner"]
+[node name="BalaoP" type="Sprite2D" parent="NPCs/Questioner"]
 position = Vector2(6, -17)
 texture = ExtResource("10_5aj6i")
 
-[node name="BalaoRC" type="Sprite2D" parent="Questioner"]
+[node name="BalaoRC" type="Sprite2D" parent="NPCs/Questioner"]
 position = Vector2(8, -16)
 texture = ExtResource("11_p3sgq")
 
-[node name="BalaoRE" type="Sprite2D" parent="Questioner"]
+[node name="BalaoRE" type="Sprite2D" parent="NPCs/Questioner"]
 position = Vector2(7, -16)
 texture = ExtResource("12_kh0ct")
+
+[node name="Area2D" type="Area2D" parent="NPCs/Questioner"]
+position = Vector2(1, 0)
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Questioner/Area2D"]
+position = Vector2(-0.815002, 0)
+shape = SubResource("RectangleShape2D_8dr7s")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-62, 61)
+position = Vector2(-104, 59)
 shape = SubResource("RectangleShape2D_eoxux")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(381, 69)
+position = Vector2(342, 73)
 shape = SubResource("RectangleShape2D_eoxux")
+
+[connection signal="body_entered" from="Player/Area2D" to="Player" method="_on_interaction_area_body_entered"]
+[connection signal="body_exited" from="Player/Area2D" to="Player" method="_on_interaction_area_body_exited"]

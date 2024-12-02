@@ -6,6 +6,8 @@ const SPEED = 80.0
 
 @onready var global_data = get_node("/root/Global")
 
+var closest_interactable_npc = null
+
 func _ready() -> void:
 	if label:
 		label.text = "Fase 1"  # Define o texto
@@ -17,10 +19,10 @@ func _input(event: InputEvent):
 	if Dialogic.current_timeline != null:
 		return
 
-	#if event is InputEventKey and event.keycode == KEY_ENTER and event.pressed:
-	#	print("Novo evento!")
-	#	Dialogic.start('timeline1')
-	#	get_viewport().set_input_as_handled()
+	if event.is_action_pressed("ui_accept"):
+		if closest_interactable_npc:
+			print("interagiu")
+			closest_interactable_npc.interact()
 
 
 
@@ -36,7 +38,7 @@ func _process(delta: float) -> void:
 
 #Coisas relacionadas a fisica do jogo/input-output, possivelmente nao vai mudar mais
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
+
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
@@ -51,3 +53,24 @@ func _physics_process(delta: float) -> void:
 
 
 	move_and_slide()
+
+
+
+
+
+
+
+
+func _on_interaction_area_body_entered(body: Node) -> void:
+	print(body)
+	
+	if body.has_method("interact"):
+		closest_interactable_npc = body
+		
+		
+
+# Detect when leaving an NPC's interaction area
+func _on_interaction_area_body_exited(body: Node) -> void:
+	print("Exited Area")
+	if body == closest_interactable_npc:
+		closest_interactable_npc = null
