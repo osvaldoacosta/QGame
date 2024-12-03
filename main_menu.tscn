@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://cfq5ditsdkjdn"]
+
+[ext_resource type="Texture2D" uid="uid://dwf7tytjhpukt" path="res://sprites/menutittle.png" id="1_12sqt"]
+[ext_resource type="Texture2D" uid="uid://dupw6wjnybak3" path="res://sprites/jogarbtn.png" id="2_m5uem"]
+[ext_resource type="Texture2D" uid="uid://ch3ynfss7020u" path="res://sprites/opcoesbtn.png" id="3_qk8d3"]
+[ext_resource type="Texture2D" uid="uid://byjfwimvjioil" path="res://sprites/background.png" id="4_mkqc1"]
+
+[node name="MainMenu" type="Node2D"]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 141.0
+offset_top = 50.0
+offset_right = 364.0
+offset_bottom = 197.0
+
+[node name="Title" type="TextureRect" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("1_12sqt")
+stretch_mode = 3
+
+[node name="Play" type="TextureRect" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_m5uem")
+stretch_mode = 2
+
+[node name="Options" type="TextureRect" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("3_qk8d3")
+stretch_mode = 2
+
+[node name="Backgroyund" type="TextureRect" parent="."]
+z_index = -1
+offset_right = 496.0
+offset_bottom = 272.0
+texture = ExtResource("4_mkqc1")
