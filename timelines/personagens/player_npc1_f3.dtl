@@ -1,0 +1,21 @@
+Jose: Ah, você chegou! Estava te esperando. Sabe, acho que é um bom momento para conversarmos. Tem algo importante acontecendo, e eu preciso compartilhar.
+[wait time="0.5"]
+player: <Empty Text Event>
+- Claro, José. O que você tem para me mostrar?
+	Jose: Ótimo, vem comigo! Quero te mostrar algo que acho que vai fazer diferença no jeito como você vê as coisas.
+- Parece sério. Sobre o que é?
+	Jose: Sério? Um pouco, mas também é algo que pode inspirar. Deixa eu te mostrar.
+Jose: Este é o Relatório Nacional Voluntário que o Brasil apresentou à ONU em julho. Ele analisa como estamos indo com os Objetivos de Desenvolvimento Sustentável, os ODS. Olha isso\: só 8,3% das metas foram totalmente atingidas. Parece pouco, não?
+player: <Empty Text Event>
+- Nossa, menos de 10%? Isso parece preocupante
+	Jose: Pois é, parece ruim, mas também mostra que ainda há muito a fazer. E cada ação importa.
+- Hmm, não é tão ruim, considerando o que enfrentamos nos últimos anos.
+	Jose: Você tem razão. A pandemia realmente atrapalhou muita coisa. Mas é justamente por isso que precisamos redobrar os esforços agora.
+Jose: O mais preocupante é que 42% das metas não puderam ser avaliadas porque faltaram dados ou os registros eram inconsistentes. Imagine tentar resolver um problema sem saber o que está realmente acontecendo!
+player: Isso é frustrante. Como podemos saber onde agir sem informações claras?
+Jose: Exatamente! Sem informação, ficamos no escuro. É por isso que iniciativas locais, como as daqui, podem fazer tanta diferença.
+Jose: Você sabia que o governo priorizou algumas metas no PPA de 2024 a 2027? É interessante, mas também mostra como ainda há espaço para nós, como cidadãos, ajudarmos a alcançar objetivos que ficaram de fora.
+player: Entendi, imagino que , eles escolhem com base em impacto e viabilidade, mas nem sempre isso reflete a realidade local. Por isso, precisamos fazer nossa parte também.
+Jose: Então, o que você acha? Está pronto para dar o próximo passo e fazer parte dessa transformação?
+player: Com certeza. Vamos juntos.
+[end_timeline]

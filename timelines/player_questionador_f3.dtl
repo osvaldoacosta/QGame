@@ -1,0 +1,25 @@
+questioner: Ora ora, então você conseguiu, chegou até a última fase.
+player: Sim, depois de bastante esforço.
+questioner: Então eu não vou enrolar, é o teste final, respire fundo e boa sorte!
+questioner: No Relatório Nacional Voluntário (RNV) de 2024, apresentado pelo Brasil, qual é a porcentagem das metas que não puderam ser avaliadas devido à falta ou inconsistência de dados?
+- 37%
+- 42%
+	[signal arg="acertou1"]
+	set {passouf3} += 1
+- 15,4%
+Sobre o ODS 7, que trata de energia limpa e acessível, qual iniciativa foi destacada por ajudar a reduzir desigualdades regionais e melhorar o acesso em comunidades isoladas, especialmente no Norte e Nordeste?
+- PPA 2024-2027
+- Leilões de Energia Renovável
+- Luz para Todos
+	[signal arg="acertou2"]
+	set {passouf3} += 1
+questioner: Considerando a matriz energética brasileira, qual é o percentual de fontes renováveis indicado no Relatório Nacional Voluntário para o ano de 2024?
+- 47,4%
+	[signal arg="acertou3"]
+	set {passouf3} += 1
+- 99,8%
+- 8,3%
+if {passouf3} == 3:
+	questioner: MEUS PARABÉNS, VOCÊ AGORA É UM BARRAQUEIRO COMO NÓS!!!! APROVEITE E MULTIPLIQUE OS SEUS CONHECIMENTOS
+else:
+	questioner: Não foi dessa vez, foram perguntas difíceis, não desanime, colha masi informações e volte aqui denovo.
