@@ -23,6 +23,6 @@ Luan: Por que o acesso à energia é considerado essencial, segundo o texto?
 - Porque permite maior conforto e lazer nas residências
 - Porque reduz automaticamente a pobreza em países subdesenvolvidos
 if {passouF1} == 3:
-	Luan: Está indo bem {playerName}, mas não acaba por aqui, você está habilitado para um novo nível de conhecimento, volte e busque novas informações!
+	Luan: Está indo bem, mas não acaba por aqui, você está habilitado para um novo nível de conhecimento, volte e busque novas informações!
 else:
 	Para você avançar, precisa acertar todas as perguntas, não foi o que aconteceu, volte e converse com os barraqueiros novamente!!

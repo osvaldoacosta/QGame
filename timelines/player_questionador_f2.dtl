@@ -23,7 +23,7 @@ questioner: Em relação ao investimento em energias limpas, qual foi a reduçã
 	set {passouf2} += 1
 - De 28,4 bilhões para 18 bilhões de dólares
 if {passouf2} == 3:
-	questioner: Você agora vai para a última etapa para se tornar um barraqueiro, parabéns, mas já t evaiso, preste mais desbrave mais do que nunca!
+	questioner: Você agora vai para a última etapa para se tornar um barraqueiro, parabéns, mas já te aviso, preste mais desbrave mais do que nunca!
 else:
 	questioner: Para você avançar, precisa acertar todas as perguntas, não foi o que aconteceu, volte, você precisa aprender mais dos barraqueiros.
 [end_timeline]

@@ -1,40 +1,83 @@
-[gd_scene load_steps=5 format=3 uid="uid://cfq5ditsdkjdn"]
+[gd_scene load_steps=8 format=3 uid="uid://b0afw4hfy6p71"]
 
 [ext_resource type="Texture2D" uid="uid://dwf7tytjhpukt" path="res://sprites/menutittle.png" id="1_12sqt"]
 [ext_resource type="Texture2D" uid="uid://dupw6wjnybak3" path="res://sprites/jogarbtn.png" id="2_m5uem"]
+[ext_resource type="Script" path="res://play.gd" id="3_88y8t"]
 [ext_resource type="Texture2D" uid="uid://ch3ynfss7020u" path="res://sprites/opcoesbtn.png" id="3_qk8d3"]
 [ext_resource type="Texture2D" uid="uid://byjfwimvjioil" path="res://sprites/background.png" id="4_mkqc1"]
+[ext_resource type="AudioStream" uid="uid://bg6dy6iby34ew" path="res://music/sfx/90s-game-ui-6-185099.mp3" id="5_asfdd"]
+[ext_resource type="AudioStream" uid="uid://dr4nkgl0a5q0n" path="res://music/sfx/Cherry Coke - Cody O'Quinn - 01 Cherry Coke.mp3" id="6_d3nfi"]
 
 [node name="MainMenu" type="Node2D"]
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-offset_left = 141.0
-offset_top = 50.0
-offset_right = 364.0
-offset_bottom = 197.0
-
-[node name="Title" type="TextureRect" parent="VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 0
-texture = ExtResource("1_12sqt")
-stretch_mode = 3
-
-[node name="Play" type="TextureRect" parent="VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-texture = ExtResource("2_m5uem")
-stretch_mode = 2
-
-[node name="Options" type="TextureRect" parent="VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-texture = ExtResource("3_qk8d3")
-stretch_mode = 2
-
 [node name="Backgroyund" type="TextureRect" parent="."]
 z_index = -1
-offset_right = 496.0
-offset_bottom = 272.0
+offset_right = 1919.0
+offset_bottom = 1080.0
 texture = ExtResource("4_mkqc1")
+
+[node name="Title" type="TextureRect" parent="Backgroyund"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -86.4999
+offset_right = -3.49994
+offset_bottom = 145.0
+grow_horizontal = 2
+scale = Vector2(3, 3)
+size_flags_vertical = 0
+texture = ExtResource("1_12sqt")
+expand_mode = 5
+stretch_mode = 3
+
+[node name="Play" type="Button" parent="Backgroyund"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -121.5
+offset_top = -34.0
+offset_right = -40.5
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.52234, 2.57897)
+pivot_offset = Vector2(-31.6104, 25.2998)
+script = ExtResource("3_88y8t")
+
+[node name="Sprite2D" type="Sprite2D" parent="Backgroyund/Play"]
+position = Vector2(41, 11)
+texture = ExtResource("2_m5uem")
+
+[node name="ClickSound" type="AudioStreamPlayer2D" parent="Backgroyund/Play"]
+stream = ExtResource("5_asfdd")
+volume_db = 2.0
+
+[node name="Opcoes" type="Button" parent="Backgroyund"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -72.5
+offset_top = 45.0
+offset_right = 6.5
+offset_bottom = 67.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.5568, 2.66248)
+
+[node name="Sprite2D" type="Sprite2D" parent="Backgroyund/Opcoes"]
+position = Vector2(39.8937, 10.8921)
+texture = ExtResource("3_qk8d3")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_d3nfi")
+volume_db = 6.651
+autoplay = true
+
+[connection signal="pressed" from="Backgroyund/Play" to="Backgroyund/Play" method="_on_play_pressed"]

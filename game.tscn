@@ -1,9 +1,10 @@
-[gd_scene load_steps=56 format=4 uid="uid://rgq4vnq1ni2s"]
+[gd_scene load_steps=58 format=4 uid="uid://rgq4vnq1ni2s"]
 
 [ext_resource type="Texture2D" uid="uid://crehfu7sum0aj" path="res://sprites/scenetiles.png" id="1_h3ynu"]
 [ext_resource type="Texture2D" uid="uid://tus0p4rif" path="res://sprites/gamesprites.png" id="1_hcd81"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_vclcn"]
 [ext_resource type="Texture2D" uid="uid://byjfwimvjioil" path="res://sprites/background.png" id="1_w33cx"]
+[ext_resource type="AudioStream" uid="uid://duowo82lvv88y" path="res://music/sfx/sfx_step_grass_l.mp3" id="5_1d1uk"]
 [ext_resource type="Script" path="res://scripts/npc1.gd" id="5_241ha"]
 [ext_resource type="Script" path="res://scripts/npc_2.gd" id="6_1n1nd"]
 [ext_resource type="Texture2D" uid="uid://boyfiqyxstxbx" path="res://sprites/baloes/sprite_0_0.png" id="6_7bvt8"]
@@ -12,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://b4wye7n4ybcrd" path="res://sprites/baloes/sprite_0_1.png" id="10_5aj6i"]
 [ext_resource type="Texture2D" uid="uid://7b04hmvoh6qb" path="res://sprites/baloes/sprite_0_2.png" id="11_p3sgq"]
 [ext_resource type="Texture2D" uid="uid://cf4f2tv3yng5f" path="res://sprites/baloes/sprite_0_3.png" id="12_kh0ct"]
+[ext_resource type="AudioStream" uid="uid://dcf1o7swqgf5f" path="res://music/sfx/POL-deep-emerald-short.wav" id="14_n671n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mdfh"]
 texture = ExtResource("1_w33cx")
@@ -568,6 +570,9 @@ physics_layer_0/collision_layer = 1
 sources/2 = SubResource("TileSetAtlasSource_7mdfh")
 sources/3 = SubResource("TileSetAtlasSource_a61wl")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eoxux"]
+size = Vector2(20, 48.5)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_bfis5"]
 atlas = ExtResource("1_hcd81")
 region = Rect2(0, 32, 16, 16)
@@ -820,10 +825,7 @@ animations = [{
 size = Vector2(13.815, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8dr7s"]
-size = Vector2(16, 20)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_eoxux"]
-size = Vector2(20, 133)
+size = Vector2(16, 70)
 
 [node name="Game" type="Node2D"]
 position = Vector2(86, 0)
@@ -842,6 +844,13 @@ expand_mode = 2
 position = Vector2(28, 46)
 tile_map_data = PackedByteArray("AAD+/wUAAwAAAAEAAAD//wUAAwAAAAEAAAAAAAUAAwAAAAEAAAABAAUAAwAAAAEAAAACAAUAAwAAAAEAAAADAAUAAwAAAAEAAAAEAAUAAwAAAAEAAAAFAAUAAwAAAAEAAAAGAAUAAwAAAAEAAAAHAAUAAwAAAAEAAAAIAAUAAwAAAAEAAAAJAAUAAwAAAAEAAAAKAAUAAwABAAEAAAALAAUAAwAAAAEAAAAMAAUAAwABAAEAAAANAAUAAwAAAAEAAAAOAAUAAwAAAAEAAAAPAAUAAwAAAAEAAAAQAAUAAwAAAAEAAAARAAUAAwAAAAEAAAD+/wYAAwACAAEAAAD//wYAAwACAAEAAAAAAAYAAwACAAEAAAABAAYAAwACAAEAAAACAAYAAwACAAEAAAADAAYAAwACAAEAAAAEAAYAAwACAAEAAAAFAAYAAwACAAEAAAAGAAYAAwACAAEAAAAHAAYAAwACAAEAAAAIAAYAAwACAAEAAAAJAAYAAwACAAEAAAARAAYAAwACAAEAAAAQAAYAAwACAAEAAAAPAAYAAwACAAEAAAAOAAYAAwACAAEAAAANAAYAAwACAAEAAAAMAAYAAwACAAEAAAALAAYAAwACAAEAAAAKAAYAAwACAAEAAAASAAUAAwABAAEAAAASAAYAAwADAAEAAAACAAQAAwAAAAMAAAADAAQAAwABAAMAAAAGAAQAAwAAAAMAAAAHAAQAAwABAAMAAAAKAAQAAwAAAAMAAAALAAQAAwABAAMAAAD9/wUAAwAAAAEAAAD8/wUAAwAAAAEAAAD7/wUAAwAAAAEAAAD6/wUAAwAAAAEAAAD5/wUAAwAAAAEAAAATAAUAAwAAAAEAAAAUAAUAAwAAAAEAAAAVAAUAAwAAAAEAAAAWAAUAAwAAAAEAAAATAAYAAwACAAEAAAAUAAYAAwACAAEAAAAVAAYAAwACAAEAAAAWAAYAAwACAAEAAAD9/wYAAwACAAEAAAD8/wYAAwACAAEAAAD7/wYAAwACAAEAAAD6/wYAAwACAAEAAAD5/wYAAwACAAEAAAD5/wcAAwACAAEAAAD6/wcAAwACAAEAAAAYAAcAAwACAAEAAAAYAAYAAwACAAEAAAAXAAYAAwACAAEAAAAXAAcAAwACAAEAAAAWAAcAAwACAAEAAAAVAAcAAwACAAEAAAAUAAcAAwACAAEAAAATAAcAAwACAAEAAAASAAcAAwACAAEAAAARAAcAAwACAAEAAAAQAAcAAwACAAEAAAAPAAcAAwACAAEAAAAOAAcAAwACAAEAAAANAAcAAwACAAEAAAAMAAcAAwACAAEAAAALAAcAAwACAAEAAAAKAAcAAwACAAEAAAAJAAcAAwACAAEAAAAIAAcAAwACAAEAAAAHAAcAAwACAAEAAAAGAAcAAwACAAEAAAAFAAcAAwACAAEAAAAEAAcAAwACAAEAAAADAAcAAwACAAEAAAACAAcAAwACAAEAAAABAAcAAwACAAEAAAAAAAcAAwACAAEAAAD//wcAAwACAAEAAAD+/wcAAwACAAEAAAD9/wcAAwACAAEAAAD8/wcAAwACAAEAAAD7/wcAAwACAAEAAAD4/wYAAwACAAEAAAD3/wYAAwACAAEAAAD3/wcAAwACAAEAAAD4/wcAAwACAAEAAAAXAAUAAwABAAEAAAAYAAUAAwABAAEAAAD4/wUAAwABAAEAAAD3/wUAAwABAAEAAAAWAP3/AgABAAQAAAAWAP7/AgABAAUAAAAWAP//AgABAAYAAAAWAAAAAgABAAcAAAAWAAEAAgABAAgAAAAWAAIAAgABAAkAAAAWAAMAAgABAAoAAAAWAAQAAgABAAsAAAAXAP3/AgACAAQAAAAXAP7/AgACAAUAAAAXAP//AgACAAYAAAAXAAAAAgACAAcAAAAXAAEAAgACAAgAAAAXAAIAAgACAAkAAAAXAAMAAgACAAoAAAAXAAQAAgACAAsAAAAYAP3/AgADAAQAAAAYAP7/AgADAAUAAAAYAP//AgADAAYAAAAYAAAAAgADAAcAAAAYAAEAAgADAAgAAAAYAAIAAgADAAkAAAAYAAMAAgADAAoAAAAYAAQAAgADAAsAAAAZAP3/AgAEAAQAAAAZAP7/AgAEAAUAAAAZAP//AgAEAAYAAAAZAAAAAgAEAAcAAAAZAAEAAgAEAAgAAAAZAAIAAgAEAAkAAAAZAAMAAgAEAAoAAAAZAAQAAgAEAAsAAAD2/wUAAwABAAEAAAD1/wUAAwABAAEAAAD0/wUAAwABAAEAAADz/wUAAwABAAEAAADz/wYAAwACAAEAAAD0/wYAAwACAAEAAAD1/wYAAwACAAEAAAD1/wcAAwACAAEAAAD2/wcAAwACAAEAAAD2/wYAAwACAAEAAAD0/wcAAwACAAEAAADz/wcAAwACAAEAAADy/wcAAwACAAEAAADy/wYAAwACAAEAAADy/wUAAwABAAEAAAAZAAUAAwABAAEAAAAZAAYAAwACAAEAAAAZAAcAAwACAAEAAAAaAAUAAwABAAEAAAAbAAUAAwABAAEAAAAdAAUAAwABAAEAAAAcAAUAAwABAAEAAAAeAAUAAwABAAEAAAAaAAYAAwADAAEAAAAbAAYAAwADAAEAAAAcAAYAAwADAAEAAAAdAAYAAwADAAEAAAAeAAYAAwADAAEAAAAeAAcAAwADAAEAAAAdAAcAAwADAAEAAAAcAAcAAwADAAEAAAAbAAcAAwADAAEAAAAaAAcAAwADAAEAAAA=")
 tile_set = SubResource("TileSet_3glca")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(-126, 100)
+
+[node name="FirstBox" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(-24, 1)
+shape = SubResource("RectangleShape2D_eoxux")
 
 [node name="Player" type="CharacterBody2D" parent="."]
 z_index = 1
@@ -863,6 +872,7 @@ zoom = Vector2(8, 8)
 [node name="Sprite2D" type="Sprite2D" parent="Player/Camera2D"]
 
 [node name="Fase" type="Label" parent="Player/Camera2D"]
+visible = false
 texture_filter = 1
 offset_left = -22.0
 offset_top = -41.0
@@ -871,10 +881,16 @@ offset_bottom = -18.0
 
 [node name="Area2D" type="Area2D" parent="Player"]
 collision_layer = 0
-collision_mask = 2
+collision_mask = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Area2D"]
 shape = SubResource("RectangleShape2D_cpile")
+
+[node name="LeftFootstepSound" type="AudioStreamPlayer2D" parent="Player"]
+stream = ExtResource("5_1d1uk")
+volume_db = -10.0
+
+[node name="Timer" type="Timer" parent="Player"]
 
 [node name="NPCs" type="Node" parent="."]
 
@@ -950,31 +966,32 @@ collision_mask = 0
 shape = SubResource("RectangleShape2D_cbhxn")
 
 [node name="Questioner" type="CharacterBody2D" parent="NPCs"]
-position = Vector2(330.815, 118)
+position = Vector2(332, 117)
 collision_layer = 3
 collision_mask = 2
 script = ExtResource("8_6oeaw")
 
 [node name="Animation" type="AnimatedSprite2D" parent="NPCs/Questioner"]
+position = Vector2(0, 1)
 sprite_frames = SubResource("SpriteFrames_1gpc0")
 animation = &"q_idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Questioner"]
-position = Vector2(0.0924988, 0)
+position = Vector2(2.23517e-08, 0)
 shape = SubResource("RectangleShape2D_38hpv")
 
-[node name="Timer" type="Timer" parent="NPCs/Questioner"]
+[node name="EndgameTimer" type="Timer" parent="NPCs/Questioner"]
 
 [node name="BalaoP" type="Sprite2D" parent="NPCs/Questioner"]
 position = Vector2(6, -17)
 texture = ExtResource("10_5aj6i")
 
 [node name="BalaoRC" type="Sprite2D" parent="NPCs/Questioner"]
-position = Vector2(8, -16)
+position = Vector2(8, -17)
 texture = ExtResource("11_p3sgq")
 
 [node name="BalaoRE" type="Sprite2D" parent="NPCs/Questioner"]
-position = Vector2(7, -16)
+position = Vector2(8, -17)
 texture = ExtResource("12_kh0ct")
 
 [node name="Area2D" type="Area2D" parent="NPCs/Questioner"]
@@ -985,21 +1002,17 @@ collision_mask = 0
 position = Vector2(-0.815002, 0)
 shape = SubResource("RectangleShape2D_8dr7s")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="EndBody2D" type="StaticBody2D" parent="."]
+collision_layer = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-104, 59)
-shape = SubResource("RectangleShape2D_eoxux")
+[node name="EndBox" type="CollisionShape2D" parent="EndBody2D"]
+position = Vector2(318.185, 91)
+shape = SubResource("RectangleShape2D_8dr7s")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(342, 73)
-shape = SubResource("RectangleShape2D_eoxux")
-
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("14_n671n")
+volume_db = -15.675
+autoplay = true
 
 [connection signal="body_entered" from="Player/Area2D" to="Player" method="_on_interaction_area_body_entered"]
 [connection signal="body_exited" from="Player/Area2D" to="Player" method="_on_interaction_area_body_exited"]

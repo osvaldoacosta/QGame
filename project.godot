@@ -39,9 +39,10 @@ directories/dtl_directory={
 "player_npc1_f3": "res://timelines/personagens/player_npc1_f3.dtl",
 "player_npc2_f1": "res://timelines/player_npc2_f1.dtl",
 "player_npc2_f2": "res://timelines/player_npc2_f2.dtl",
-"player_npc2_f3": "res://timelines/player_npc3_f3.dtl",
+"player_npc2_f3": "res://timelines/player_npc2_f3.dtl",
 "player_npc3_f1": "res://timelines/player_npc3_f1.dtl",
 "player_npc3_f2": "res://timelines/player_npc3_f2.dtl",
+"player_npc3_f3": "res://timelines/player_npc3_f3.dtl",
 "player_questionador_f1": "res://timelines/player_questionador_f1.dtl",
 "player_questionador_f2": "res://timelines/player_questionador_f2.dtl",
 "player_questionador_f3": "res://timelines/player_questionador_f3.dtl",
@@ -49,11 +50,10 @@ directories/dtl_directory={
 "timelineNpc1": "res://dialogic/timelineNpc1.dtl",
 "timelineNpc2": "res://dialogic/timelineNpc2.dtl",
 "timelineNpc3": "res://dialogic/timelineNpc3.dtl",
-"timelineQ": "res://dialogic/timelineQ.dtl",
-"timelines/player_npc2_f3": "res://timelines/player_npc2_f3.dtl"
+"timelineQ": "res://dialogic/timelineQ.dtl"
 }
-layout/style_list=["res://timelines/personagens/pictureStyle.tres", "res://timelines/personagens/visuNovelStyle.tres"]
-layout/default_style="res://dialogic/teste.tres"
+layout/style_list=["res://dialogic/a.tres"]
+layout/default_style="res://dialogic/a.tres"
 variables={
 "npc1": "Jose",
 "npc2": "Marco",
@@ -61,7 +61,7 @@ variables={
 "passouF1": 0,
 "passouf2": 0,
 "passouf3": 0,
-"playerName": "Mateus"
+"playerName": ""
 }
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01

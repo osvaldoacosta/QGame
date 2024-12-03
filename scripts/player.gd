@@ -3,14 +3,17 @@ extends CharacterBody2D
 @onready var _animated_sprite = $Animation
 const SPEED = 80.0
 @onready var label = $Camera2D/Fase  # Substitua pelo caminho do nó Label
-
 @onready var global_data = get_node("/root/Global")
 
+
 var closest_interactable_npc = null
+
 
 func _ready() -> void:
 	if label:
 		label.text = "Fase 1"  # Define o texto
+
+
 
 # Dialogic
 func _input(event: InputEvent):
@@ -56,16 +59,12 @@ func _physics_process(delta: float) -> void:
 
 
 
-
-
-
-
-
 func _on_interaction_area_body_entered(body: Node) -> void:
-	print(body)
-	
 	if body.has_method("interact"):
 		closest_interactable_npc = body
+	if(body.name == "EndBody2D"):
+		print("é o fim!")
+		get_tree().change_scene_to_file("res://main_menu.tscn")
 		
 		
 

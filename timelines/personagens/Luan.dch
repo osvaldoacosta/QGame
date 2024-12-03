@@ -7,15 +7,25 @@
 "prefix": "",
 "sound_mood_default": "",
 "sound_moods": {},
-"style": "",
+"style": "a",
 "suffix": ""
 },
-"default_portrait": "",
+"default_portrait": "New portrait",
 "description": "",
 "display_name": "Luan",
 "mirror": false,
 "nicknames": [""],
 "offset": Vector2(0, 0),
-"portraits": {},
+"portraits": {
+"New portrait": {
+"export_overrides": {
+"image": "\"res://portraits/questpfp.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+}
+},
 "scale": 1.0
 }
